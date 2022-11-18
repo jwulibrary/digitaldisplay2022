@@ -1,0 +1,276 @@
+/* structure */
+
+html {}
+
+body {
+  font-family: 'Open Sans', Sans-Serif;
+  margin: 0;
+  color: #000;
+  background-color: #FFF;
+  /* background-image: linear-gradient(to top, #2669a2b0 0%, #f5e4e9 100%); */
+}
+
+#page-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+/* header */
+
+#header-wrapper {
+  padding: 10px 0;
+  width: 100%;
+  background-color: #004a91;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  justify-content: space-between;
+  height: 100px;
+}
+
+#library-logo {
+  width: 15%;
+  justify-content: flex-start;
+  padding: 0 2% 0 2%;
+}
+
+#library-logo img {
+  max-width: 99%;
+}
+
+#hours {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: flex-end;
+  width: 75%;
+  font-size: 38px;
+  padding-right: 3%;
+  font-weight: bold;
+  margin-left: 30px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.hour_item {
+  align-self: center;
+  margin-left: 2%;
+}
+
+/* content */
+
+#main-wrapper {
+  display: flex;
+  justify-self: flex-end;
+  justify-content: space-between;
+  height: 100%;
+  justify-self: center;
+}
+
+.rotating {
+  align-self: flex-start;
+  justify-self: center;
+  display: flex;
+}
+
+.rotating h2 {
+  margin: 20px 0 4px 0;
+  justify-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 52px;
+  color: #000;
+  font-family: Roboto;
+  font-style: italic;
+  letter-spacing: 8px;
+  color: #404040;
+  font-variant: small-caps;
+  font-variant: all-small-caps;
+}
+
+#database, #announcement, #book {
+  width: 90%;
+  margin: 0 5%;
+}
+
+#announcement img, #book img {}
+
+.split-wrap {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: row;
+  height: 100%;
+}
+
+.wrap-left {
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.wrap-right {
+  justify-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+}
+
+#book, #database {
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 0 5%;
+  height: 100%;
+}
+
+h3#book-title, h3#database-title {
+  font-size: 56px;
+  font-weight: bold;
+  color: #be3d02;
+  margin: 10px 0px 30px 0;
+  font-style: italic;
+}
+
+#book-image {
+  width: 100%;
+  min-height: 55vh;
+  max-height: 60vh;
+  height: auto;
+}
+
+#database-image {
+  width: 100%;
+  min-height: 55vh;
+  max-height: 60vh;
+  height: auto;
+}
+
+#book-description {
+  margin: 0 60px;
+  background: rgba(0, 74, 145);
+  background: rgba(0, 74, 145, .8);
+}
+
+#database-description {
+  margin: 10% 60px;
+  max-height:80%;
+  background: rgba(0, 74, 145);
+  background: rgba(0, 74, 145, .8);
+}
+
+p#book-description{
+  color: #FFF;
+  padding: 13px 18px;
+  font-size: 34px;
+  font-weight: normal;
+  line-height: 42px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+ p#database-description {
+  color: #FFF;
+  padding: 22px 38px;
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 48px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+#call-number {
+  font-size: 36px;
+  align-self: center;
+  margin-top: 5px;
+}
+
+#video{
+  height: 100%;
+  width: 100%;
+}
+
+#video video{
+  max-height: 100%;
+  width: 100%;
+  height: 855px;
+}
+
+#poster, #poster2 {
+  height: 100%;
+  width: 100%;
+}
+
+
+#poster img, #poster2 img {
+  max-height: 100%;
+  width: 100%;
+  /* width:3557px; */
+  height: 855px;
+  /* border-radius: 20px; */
+}
+
+/*
+footer */
+
+#footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #FFF;
+  color: #004a91;
+  justify-self: flex-end;
+}
+
+#datetime {
+  font-size: 32px;
+  justify-self: flex-start;
+  padding: 0 1.5%;
+  background-color: #c5c8c6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 20%;
+  font-weight: bold;
+}
+
+#jwu-seal {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  justify-content: flex-end;
+  width: 10%;
+  margin-right: 15px;
+}
+
+#jwu-seal img {
+  padding: 20px;
+  width: 90%;
+  justify-self: flex-end;
+}
+
+#message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  font-size: 30px;
+  font-style: italic;
+  justify-self: center;
+  text-transform: none;
+  /*background-color: #ffbd30ad;*/
+  /*border:1px solid blue;*/
+  padding: 1% 0%;
+}

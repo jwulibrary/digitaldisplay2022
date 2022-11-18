@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Display </title>
+  <!-- <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles/style.css') }}"> -->
+
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles/post_css.css') }}">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500i,700,700i,900" rel="stylesheet" />
+
+  <script src="{{ url_for('static', filename='scripts/jquery-3.2.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/lodash.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/color-thief.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+
+
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <!-- <video autoplay loop id="video-background" muted plays-inline>
+  <source src="static/fireplace.mp4" type="video/mp4">
+
+
+</video> -->
+    <header id="header-wrapper">
+      <div id='library-logo'>
+
+        <img onclick="refreshContent();" src='static/library-identifier-whiteandorange.svg' />
+      </div>
+      <div id="hours">
+        {% for loc in hours %}
+
+        <div class='hour_item'>
+          {{loc[0]}}: {{loc[1]}}
+        </div> {% endfor %}
+      </div>
+    </header>
+
+
+
+
+    <article id="main-wrapper">
+
+
+
+
+      <section id="book" class='rotating'>
+        <h2>Check out this New Book</h2>
+        <h3 id='book-title'>{{book['title']}}</h3>
+        <div class="split-wrap">
+          <div class="wrap-left">
+
+            <img id='book-image' src="{{book['image']}}" />
+          </div>
+          <div class='wrap-right'>
+
+            <p id='book-description'>
+              {{book['description']}}
+            </p>
+            <div id="call-number">
+              {{book['call_number']}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id="poster" class='rotating'>
+        <img id="poster-img" src={{poster_img}} />
+      </section>
+
+
+            <section id="poster2" class='rotating'>
+              <img id="poster-img2" src={{poster_img2}} />
+            </section>
+
+
+            <!-- <section id="video" class='rotating'>
+             {{video|safe}}
+            </section> -->
+
+
+    </article>
+
+
+
+
+    <footer id="footer-wrapper">
+      <div id="datetime">
+      </div>
+
+
+
+      <div id='message'>
+
+      </div>
+
+
+      <div id='jwu-seal'>
+        <img onclick="changeSlides();" src='static/jwuseal_alt.png' />
+      </div>
+
+    </footer>
+  </div>
+
+
+
+
+</body>
+
+</html>
